@@ -1,6 +1,6 @@
 {
   "name": "floid-ng",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -28,7 +28,7 @@
     "help": "nx help",
     "copy-readme-rhetos": "copy .\\README.md .\\dist\\libs\\rhetos",
     "build:lib-pack": "ng build rhetos && npm run copy-readme-rhetos &&  cd dist/libs/rhetos && npm pack",
-    "commit-git": "git commit -m -a \"build: adds new release\" && git push origin && git push origin --tags",
+    "commit-git": "git commit -a -m  \"build: adds new release\" && git push origin && git push origin --tags",
     "bump-version:patch": "npm version patch --force && cd libs/rhetos && npm version patch --force",
     "pre-publish:patch": "run-s bump-version:patch build:lib-pack commit-git"
   },
