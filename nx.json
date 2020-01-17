@@ -1,5 +1,5 @@
 {
-  "npmScope": "publish-integration",
+  "npmScope": "floid-ng",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -10,5 +10,16 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "rhetos": {
+      "tags": []
+    },
+    "sandbox": {
+      "tags": []
+    },
+    "sandbox-e2e": {
+      "tags": [],
+      "implicitDependencies": ["sandbox"]
+    }
+  }
 }

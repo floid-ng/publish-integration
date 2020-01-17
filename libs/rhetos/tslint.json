@@ -1,0 +1,12 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "publishIntegration",
+      "camelCase"
+    ],
+    "component-selector": [true, "element", "floid-ng", "kebab-case"]
+  }
+}
