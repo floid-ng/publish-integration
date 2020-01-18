@@ -1,5 +1,9 @@
 import { Injectable } from '@angular/core';
-import { ComplexEntityInfo, FunctionInfo, StructureInfo } from '../data-structures/info';
+import {
+  ComplexEntityInfo,
+  FunctionInfo,
+  StructureInfo
+} from '../data-structures/info';
 import { ActionService } from './action-service';
 import { ComplexEntityService } from './complex-entity';
 import { FunctionService } from './function-service';
@@ -24,10 +28,14 @@ export class StructureServiceFactory {
   }
 
   createFunctionService<T, R>(info: FunctionInfo<T, R>) {
-    return new FunctionService<T, R>(info.reqInfo.key, info.resInfo.key, this.base);
+    return new FunctionService<T, R>(
+      info.reqInfo.key,
+      info.resInfo.key,
+      this.base
+    );
   }
 
-  createComplexEntityService<T>(info: ComplexEntityInfo<T>) {
-    return new ComplexEntityService<T>(info.key, info.dependentStructureKeys, this.base);
-  }
+  // createComplexEntityService<T>(info: ComplexEntityInfo<T>) {
+  //   return new ComplexEntityService<T>(info.key, info.dependentStructureKeys, this.base);
+  // }
 }
